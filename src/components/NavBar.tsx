@@ -1,18 +1,11 @@
-import Search from "./Search";
-import Logo from "./Logo";
-import NumResults from "./NumResults";
-import type { typeMovie } from "../types/typeMovie";
-
 type navBarProps = {
-  movies: typeMovie[];
+  children: React.ReactNode;
 };
 
-function NavBar({ movies }: navBarProps) {
+function NavBar({ children }: navBarProps) {
   return (
     <nav className="nav-bar">
-      <Logo />
-      <Search />
-      <NumResults movies={movies}/>
+      {children}
     </nav>
   );
 }

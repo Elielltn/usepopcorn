@@ -1,17 +1,9 @@
-import ListBox from "./ListBox";
-import WatchedBox from "./WatchedBox";
-import type { typeMovie } from "../types/typeMovie";
 type mainProps = {
-  movies: typeMovie[];
+  children: React.ReactNode;
 };
 
-function Main({ movies }: mainProps) {
-  return (
-    <main className="main">
-      <ListBox movies={movies}/>
-      <WatchedBox />
-    </main>
-  );
+function Main({ children }: mainProps) {
+  return <main className="main">{children}</main>;
 }
 
 export default Main;
