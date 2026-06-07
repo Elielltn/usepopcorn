@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { tempMovieData } from "../constants/movies";
 import type { typeMovie } from "../types/typeMovie";
 import Movie from "./Movie";
-   
-function MovieList() {
-  const [movies, setMovies] = useState<typeMovie[]>(tempMovieData);
+
+type movieListProps = {
+  movies: typeMovie[];
+};
+
+function MovieList({ movies }: movieListProps) {
   return (
     <ul className="list">
       {movies?.map((movie) => (
